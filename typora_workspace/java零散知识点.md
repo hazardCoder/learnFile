@@ -105,3 +105,20 @@ private void checkStringConstant(DiagnosticPosition var1, Object var2) {
 
 1. asList 得到的只是一个 Arrays 的内部类，一个原来数组的视图 List，因此如果对它进行**增删**操作会报错
 2. 用 ArrayList 的构造器可以将其转变成真正的 ArrayList
+
+
+
+## SPI
+
+**API和SPI的关系：**
+
+API Application Programming Interface
+
+大多数情况下，都是实现方来制定接口并完成对接口的不同实现，调用方仅仅依赖却无权选择不同实现。
+
+SPI Service Provider Interface
+
+而如果是调用方来制定接口，实现方来针对接口来实现不同的实现。**调用方来选择自己需要的实现方**。
+
+
+
