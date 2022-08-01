@@ -199,11 +199,11 @@
 
 如果搞不清楚，那就一开始先重置
 
-![image-20210227181613565](C:\Users\Qian\AppData\Roaming\Typora\typora-user-images\image-20210227181613565.png)
+![image-20210227181613565](https://s2.loli.net/2022/08/01/V5pmCLqhNnOXTDi.png)
 
 记住网段
 
-![image-20210227181803221](C:\Users\Qian\AppData\Roaming\Typora\typora-user-images\image-20210227181803221.png)
+![image-20210227181803221](https://s2.loli.net/2022/08/01/g3QBiRDx14FOYuH.png)
 
 比如这里就是192.168.72.XX
 
@@ -215,7 +215,7 @@ vim /etc/sysconfig/network-scripts/ifcfg-ens33
 
 设置如图
 
-![image-20210227182005250](C:\Users\Qian\AppData\Roaming\Typora\typora-user-images\image-20210227182005250.png)
+![image-20210227182005250](https://s2.loli.net/2022/08/01/1wQOV34exIKA8N9.png)
 
 重启完事。
 
