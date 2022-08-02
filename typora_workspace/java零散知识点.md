@@ -209,3 +209,187 @@ GB2312（1980年）：16位字符集，收录有6763个简体汉字，682个符�
 GBK（1995年）：16位字符集，收录有21003个汉字，883个符号，共21886个字符； 优点：适用于简繁中文共存的环境，为简体Windows所使用（代码页cp936），向下完全兼容gb2312，向上支持 ISO-10646 国际标准 ；所有字符都可以一对一映射到unicode2.0上； 缺点：不属于官方标准，和big5之间需要转换；很多搜索引擎都不能很好地支持GBK汉字。
 
 GB18030（2000年）：32位字符集；收录了27484个汉字，同时收录了藏文、蒙文、维吾尔文等主要的少数民族文字。 优点：可以收录所有你能想到的文字和符号，属于中国最新的国家标准； 缺点：目前支持它的软件较少。
+
+
+
+# 语法糖
+
+## switch支持string类型
+
+```java
+String str = "world";
+        switch (str) {
+        case "hello":
+            System.out.println("hello");
+            break;
+```
+
+反编译后：
+
+```java
+String str = "world";
+        String s;
+        switch((s = str).hashCode())
+        {
+        case 99162322:
+            if(s.equals("hello"))
+                System.out.println("hello");
+            break;
+        }
+```
+
+**字符串的switch是通过`equals()`和`hashCode()`方法来实现的**，且hashCode()返回的是int类型
+
+## 泛型擦除
+
+虚拟机中没有泛型，只有普通类和普通方法，所有泛型类的类型参数在**编译时**都会被擦除，泛型类并没有自己独有的`Class`类对象。比如并不存在`List<String>.class`或是`List<Integer>.class`，而只有`List.class`。
+
+## 自动拆装箱
+
+1. 自动装箱
+
+   ```java
+   int i = 10;
+   Integer n = i;
+   // 等同于
+   int i = 10;
+   Integer n = Integer.valueOf(i);
+   ```
+
+2. 自动拆箱
+
+   ```java
+   Integer i = 10;
+   int n = i;
+   // 等同于
+   Integer i = Integer.valueOf(10);
+   int n = i.intValue();
+   ```
+
+## 方法变长参数
+
+```java
+String... strs
+// 编译后为
+String strs[]
+```
+
+## 枚举
+
+```java
+public enum t {
+    SPRING,SUMMER;
+}
+```
+
+反编译后：
+
+```java
+public final class T extends Enum
+{
+    private T(String s, int i)
+    {
+        super(s, i);
+    }
+    public static T[] values()
+    {
+        T at[];
+        int i;
+        T at1[];
+        System.arraycopy(at = ENUM$VALUES, 0, at1 = new T[i = at.length], 0, i);
+        return at1;
+    }
+
+    public static T valueOf(String s)
+    {
+        return (T)Enum.valueOf(demo/T, s);
+    }
+
+    public static final T SPRING;
+    public static final T SUMMER;
+    private static final T ENUM$VALUES[];
+    static
+    {
+        SPRING = new T("SPRING", 0);
+        SUMMER = new T("SUMMER", 1);
+        ENUM$VALUES = (new T[] {
+            SPRING, SUMMER
+        });
+    }
+}
+```
+
+## 内部类
+
+`outer.java`里面定义了一个内部类`inner`，一旦编译成功，就会生成两个完全不同的`.class`文件了，分别是`outer.class`和`outer$inner.class`。
+
+进行反编译时，会同时把两个文件全部进行反编译。
+
+## 条件编译
+
+但有时候出于对程序代码优化的考虑，希望只对其中一部分内容进行编译，此时就需要在程序中加上条件，让编译器只对满足条件的代码进行编译，将不满足条件的代码舍弃，这就是条件编译。
+
+```java
+final boolean DEBUG = true;
+if(DEBUG) {
+    System.out.println("Hello, DEBUG!");
+}
+// 编译后
+boolean DEBUG = true;
+System.out.println("Hello, DEBUG!");
+```
+
+## 断言
+
+```java
+int a = 1;
+int b = 1;
+assert a == b;
+System.out.println("next");
+```
+
+编译后：
+
+```java
+int a = 1;
+int b = 1;
+if(!$assertionsDisabled && a != b)
+    throw new AssertionError();
+System.out.println("abc");
+```
+
+断言底层就是if语句，断言为false就抛出异常，true就继续执行。
+
+## 数值字面量
+
+java 7中，可以在数字之间插入任意多下划线，方便阅读
+
+```java
+int i = 10_000;
+// 反编译后
+int i = 10000;
+```
+
+## for-each
+
+for-each的实现原理其实就是使用了**普通的for循环**和**迭代器**。
+
+## try-with-resource
+
+```java
+public static void main(String... args) {
+    try (BufferedReader br = new BufferedReader(new FileReader("d:\\ hollischuang.xml"))) {
+        String line;
+        while ((line = br.readLine()) != null) {
+            System.out.println(line);
+        }
+    } catch (IOException e) {
+        // handle exception
+    }
+}
+```
+
+看似关资源的方式很方便，但是背后是编译器帮我们做了关闭资源的操作。
+
+## lambda
+
