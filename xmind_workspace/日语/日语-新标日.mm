@@ -29,6 +29,13 @@
           <node TEXT="い　→　くなかったです / くありませんでした" ID="M5HfZMn1KV" _mubu_text="%3Cspan%3E%E3%81%84%E3%80%80%E2%86%92%E3%80%80%E3%81%8F%E3%81%AA%E3%81%8B%E3%81%A3%E3%81%9F%E3%81%A7%E3%81%99%20/%20%E3%81%8F%E3%81%82%E3%82%8A%E3%81%BE%E3%81%9B%E3%82%93%E3%81%A7%E3%81%97%E3%81%9F%3C/span%3E" STYLE="fork"/>
         </node>
       </node>
+      <node TEXT="第11课" ID="uY3hZuV0J3" _mubu_text="%3Cspan%3E%E7%AC%AC11%E8%AF%BE%3C/span%3E" STYLE="fork">
+        <node TEXT="表情感形容词，能力形容词" ID="ELH7GASjbL" _mubu_text="%3Cspan%3E%E8%A1%A8%E6%83%85%E6%84%9F%E5%BD%A2%E5%AE%B9%E8%AF%8D%EF%BC%8C%E8%83%BD%E5%8A%9B%E5%BD%A2%E5%AE%B9%E8%AF%8D%3C/span%3E" STYLE="fork">
+          <node TEXT="名 が 情感形容词/能力形容词" ID="PrGamdLXj6" _mubu_text="%3Cspan%3E%E5%90%8D%20%E3%81%8C%20%E6%83%85%E6%84%9F%E5%BD%A2%E5%AE%B9%E8%AF%8D/%E8%83%BD%E5%8A%9B%E5%BD%A2%E5%AE%B9%E8%AF%8D%3C/span%3E" STYLE="fork"/>
+          <node TEXT="好きです、嫌いです、怖いです..." ID="j0qMR6O6Yq" _mubu_text="%3Cspan%3E%E5%A5%BD%E3%81%8D%E3%81%A7%E3%81%99%E3%80%81%E5%AB%8C%E3%81%84%E3%81%A7%E3%81%99%E3%80%81%E6%80%96%E3%81%84%E3%81%A7%E3%81%99...%3C/span%3E" STYLE="fork"/>
+          <node TEXT="わかります、できます、上手です、下手です、苦手です..." ID="YHkfnbcFWR" _mubu_text="%3Cspan%3E%E3%82%8F%E3%81%8B%E3%82%8A%E3%81%BE%E3%81%99%E3%80%81%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%99%E3%80%81%E4%B8%8A%E6%89%8B%E3%81%A7%E3%81%99%E3%80%81%E4%B8%8B%E6%89%8B%E3%81%A7%E3%81%99%E3%80%81%E8%8B%A6%E6%89%8B%E3%81%A7%E3%81%99...%3C/span%3E" STYLE="fork"/>
+        </node>
+      </node>
     </node>
   </node>
 </map>
