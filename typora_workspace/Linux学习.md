@@ -30,10 +30,6 @@
  	2. 延伸分区
  	3. 逻辑分区
 
-### 图例
-
-![image-20210206160332059](C:\Users\Qian\AppData\Roaming\Typora\typora-user-images\image-20210206160332059.png)
-
 ### 区别
 
 1. 主要分区与延伸分区最多可以有四笔（硬盘限制）

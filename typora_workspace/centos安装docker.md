@@ -77,15 +77,15 @@ sudo systemctl start docker
 
    3. 控制台
 
-      ![image-20210315122437701](C:\Users\Qian\AppData\Roaming\Typora\typora-user-images\image-20210315122437701.png)
+      ![image-20210315122437701](https://s2.loli.net/2024/06/01/uwvF6oTmBlzk9an.png)
 
    4. 镜像服务
 
-      ![image-20210315122531514](C:\Users\Qian\AppData\Roaming\Typora\typora-user-images\image-20210315122531514.png)
+      ![image-20210315122531514](https://s2.loli.net/2024/06/01/raAhuGZdK7wJSxT.png)
 
    5. 加速器
 
-      ![image-20210315132222492](C:\Users\Qian\AppData\Roaming\Typora\typora-user-images\image-20210315132222492.png)
+      ![image-20210315132222492](https://s2.loli.net/2024/06/01/EjqDn2FkiSacpdt.png)
 
    ```shell
    sudo mkdir -p /etc/docker

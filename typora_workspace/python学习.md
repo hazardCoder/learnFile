@@ -799,8 +799,6 @@ def get_JSON_dict(self):
 >  	4. 执行sql，可以使用通用的sql语句
 >  	5. 关闭游标
 
-![image-20210128230503723](C:\Users\Qian\AppData\Roaming\Typora\typora-user-images\image-20210128230503723.png)
-
 # Flask
 
 首先要安装setuptools和pip，可以使得安装、升级和卸载Python包过程变得便利
@@ -841,11 +839,7 @@ if __name__ == '__main__':
     app.run()
 ```
 
-可以看到提示：
-
-![image-20210130121526318](C:\Users\Qian\AppData\Roaming\Typora\typora-user-images\image-20210130121526318.png)
-
-此时已经开启了一个web应用
+可以看到提示，此时已经开启了一个web应用
 
 ### 1.添加变量
 
@@ -854,8 +848,6 @@ if __name__ == '__main__':
 def name_page(name):
     return f"Hello,{name}"
 ```
-
-![image-20210130122257085](C:\Users\Qian\AppData\Roaming\Typora\typora-user-images\image-20210130122257085.png)
 
 ## 4.使用模板
 
@@ -868,8 +860,6 @@ def name_page(name):
 ### 1.HTML应用
 
 在同等目录下创建templates，用于放置模板
-
-![image-20210130123809363](C:\Users\Qian\AppData\Roaming\Typora\typora-user-images\image-20210130123809363.png)
 
 创建html文件
 
